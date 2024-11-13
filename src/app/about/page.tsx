@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaReact, FaNodeJs, FaCss3Alt, FaHtml5 } from 'react-icons/fa'; 
 import Link from "next/link";
+import { HiOutlineArrowNarrowLeft } from 'react-icons/hi';
 
 export default function AboutPage() {
   return (
@@ -17,7 +18,7 @@ export default function AboutPage() {
             alt="Emonora"
             width={200}
             height={200}
-            className="rounded-full shadow-lg"
+            className="rounded-full border-4 border-white shadow-lg"
           />
         </div>
         <div className="md:w-2/3 md:ml-8 text-center md:text-left">
@@ -78,8 +79,14 @@ export default function AboutPage() {
       </section>
 
       <section className="text-center">
-        <h4 className="text-xl text-gray-850 mb-4">Interested in working with me?</h4>
-        <Link href="/contact">
+        <h4 className="text-xl text-gray-850 mb-4">Go back to home?</h4>
+        <Link href="/" className="mt-4 py-4 px-10 rounded-full bg-purple-700 text-white text-lg font-semibold transform transition duration-300 hover:bg-purple-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-xl hover:shadow-2xl hover:bg-opacity-90">
+          <HiOutlineArrowNarrowLeft className="inline-block mr-2 text-xl" />
+          Home
+        </Link>
+
+        <h4 className="text-xl text-gray-850 mb-4 mt-8">Interested in working with me?</h4>
+        <Link href="/contact" className="mt-4 py-4 px-10 rounded-full bg-purple-700 text-white text-lg font-semibold transform transition duration-300 hover:bg-purple-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-xl hover:shadow-2xl hover:bg-opacity-90">
           Get in touch
         </Link>
       </section>
