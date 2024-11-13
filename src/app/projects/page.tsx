@@ -1,10 +1,4 @@
-import formbricks from "@formbricks/js";
-if (typeof window !== "undefined") {
-  await formbricks.init({
-    environmentId: "cm3f4992i00074z16pyxq47eg", 
-    apiHost: "https://app.formbricks.com",
-  });
-}
+
 
 export default function ProjectsPage() {
   return (

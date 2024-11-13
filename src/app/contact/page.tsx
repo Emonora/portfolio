@@ -3,7 +3,7 @@ import formbricks from "@formbricks/js";
 
 if (typeof window !== "undefined") {
   await formbricks.init({
-    environmentId: "cm3f498zf00034z16pmll0k80", 
+    environmentId: "cm3f4992i00074z16pyxq47eg", 
     apiHost: "https://app.formbricks.com",
   });
 }
