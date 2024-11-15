@@ -1,48 +1,48 @@
 import Link from "next/link";
-import { HiOutlineUser, HiOutlineCode, HiOutlineMail } from 'react-icons/hi'; 
+import { HiOutlineUser, HiOutlineCode, HiOutlineMail } from "react-icons/hi";
 
 export default function HomePage() {
   return (
-    <main className="bg-gradient-to-r from-purple-700 via-indigo-500 to-blue-600 text-white flex flex-col items-center justify-center h-screen w-screen p-8 relative overflow-hidden">
-      <div className="absolute top-10 flex justify-center w-full">
+    <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-r from-purple-700 via-indigo-500 to-blue-600 p-8 text-white">
+      <div className="absolute top-10 flex w-full justify-center">
         <img
-          src="/pfp.jpeg" 
+          src="/pfp.jpeg"
           alt="Emonora"
-          className="w-32 h-32 rounded-full border-4 border-white shadow-lg"
+          className="h-32 w-32 rounded-full border-4 border-white shadow-lg"
         />
       </div>
 
-      <h1 className="text-5xl md:text-6xl font-extrabold mb-10 text-center text-shadow-lg animate__animated animate__fadeIn animate__delay-1s">
+      <h1 className="text-shadow-lg animate__animated animate__fadeIn animate__delay-1s mb-10 text-center text-5xl font-extrabold md:text-6xl">
         Welcome to My Portfolio!
       </h1>
 
-      <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center items-center animate__animated animate__fadeIn animate__delay-2s">
+      <div className="animate__animated animate__fadeIn animate__delay-2s flex flex-col items-center justify-center gap-6 md:flex-row md:gap-8">
         <Link
           href="/about"
-          className="mt-4 py-4 px-10 rounded-full bg-purple-700 text-white text-lg font-semibold transform transition duration-300 hover:bg-purple-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-xl hover:shadow-2xl hover:bg-opacity-90"
+          className="mt-4 transform rounded-full bg-purple-700 px-10 py-4 text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105 hover:bg-purple-800 hover:bg-opacity-90 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
         >
-          <HiOutlineUser className="inline-block mr-2 text-xl" />
+          <HiOutlineUser className="mr-2 inline-block text-xl" />
           About
         </Link>
 
         <Link
           href="/projects"
-          className="mt-4 py-4 px-10 rounded-full bg-purple-700 text-white text-lg font-semibold transform transition duration-300 hover:bg-purple-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-xl hover:shadow-2xl hover:bg-opacity-90"
+          className="mt-4 transform rounded-full bg-purple-700 px-10 py-4 text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105 hover:bg-purple-800 hover:bg-opacity-90 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
         >
-          <HiOutlineCode className="inline-block mr-2 text-xl" />
+          <HiOutlineCode className="mr-2 inline-block text-xl" />
           Projects
         </Link>
 
         <Link
           href="/contact"
-          className="mt-4 py-4 px-10 rounded-full bg-purple-700 text-white text-lg font-semibold transform transition duration-300 hover:bg-purple-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50 shadow-xl hover:shadow-2xl hover:bg-opacity-90"
+          className="mt-4 transform rounded-full bg-purple-700 px-10 py-4 text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105 hover:bg-purple-800 hover:bg-opacity-90 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
         >
-          <HiOutlineMail className="inline-block mr-2 text-xl" />
+          <HiOutlineMail className="mr-2 inline-block text-xl" />
           Contact
         </Link>
       </div>
 
-      <div className="absolute inset-0 bg-black bg-opacity-60 blur-lg z-[-1]"></div>
+      <div className="absolute inset-0 z-[-1] bg-black bg-opacity-60 blur-lg"></div>
     </main>
   );
 }

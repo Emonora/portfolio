@@ -16,31 +16,36 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <main className="bg-slate-500 h-screen py-12 px-6">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl font-semibold text-slate-800 text-center mb-8">
+    <main className="h-screen bg-slate-500 px-6 py-12">
+      <div className="mx-auto max-w-7xl">
+        <h1 className="mb-8 text-center text-4xl font-semibold text-slate-800">
           My Projects
         </h1>
-        <p className="text-center text-lg text-slate-600 mb-12">
+        <p className="mb-12 text-center text-lg text-slate-600">
           Here are some of the projects I&apos;ve worked on.
         </p>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-xl"
+              className="transform rounded-lg bg-white p-6 shadow-lg transition hover:scale-105 hover:shadow-xl"
             >
-              <h2 className="text-2xl font-semibold text-slate-800 mb-4">
-                <a href={project.url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+              <h2 className="mb-4 text-2xl font-semibold text-slate-800">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-600"
+                >
                   {project.title}
                 </a>
               </h2>
-              <p className="text-slate-600 mb-4">{project.description}</p>
+              <p className="mb-4 text-slate-600">{project.description}</p>
               <div className="flex flex-wrap space-x-2">
                 {project.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm"
+                    className="rounded-full bg-blue-200 px-3 py-1 text-sm text-blue-800"
                   >
                     {tech}
                   </span>
@@ -52,4 +57,4 @@ export default function ProjectsPage() {
       </div>
     </main>
   );
-};
+}
