@@ -1,14 +1,17 @@
 import Link from "next/link";
+import Image from "next/image";
 import { HiOutlineUser, HiOutlineCode, HiOutlineMail } from "react-icons/hi";
 
 export default function HomePage() {
   return (
     <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-r from-purple-700 via-indigo-500 to-blue-600 p-8 text-white">
       <div className="absolute top-10 flex w-full justify-center">
-        <img
+        <Image
           src="/pfp.jpeg"
           alt="Emonora"
           className="h-32 w-32 rounded-full border-4 border-white shadow-lg"
+          width={64}
+          height={64}
         />
       </div>
 
