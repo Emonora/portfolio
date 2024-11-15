@@ -15,7 +15,7 @@ export default async function Page() {
   });
 
   return (
-    <div className="mx-auto max-w-4xl p-4">
+    <div className="mx-auto p-4 bg-black text-gray-500 h-screen w-screen">
       <h1 className="my-6 text-center text-3xl font-bold">My Blog</h1>
       {posts.map((post) => (
         <BlogPost key={post.id} post={post} />
