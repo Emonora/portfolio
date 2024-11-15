@@ -40,6 +40,13 @@ export default function HomePage() {
           <HiOutlineMail className="mr-2 inline-block text-xl" />
           Contact
         </Link>
+        <Link 
+          href="/blog"
+          className="mt-4 transform rounded-full bg-purple-700 px-10 py-4 text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105 hover:bg-purple-800 hover:bg-opacity-90 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
+        >
+          <HiOutlineMail className="mr-2 inline-block text-xl" />
+          Blog
+        </Link>
       </div>
 
       <div className="absolute inset-0 z-[-1] bg-black bg-opacity-60 blur-lg"></div>
