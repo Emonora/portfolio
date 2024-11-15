@@ -1,26 +1,25 @@
-import BlogPost from '../_components/blogPost'
-import prisma from '../lib/prisma'
+import BlogPost from "../_components/blogPost";
+import prisma from "../lib/prisma";
 
 interface Post {
-  id: number
-  title: string
-  content: string
-  createdAt: string
+  id: number;
+  title: string;
+  content: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
 
-const Page = async () => {
+export default async function Page() {
   const posts: Post[] = await prisma.post.findMany({
-    orderBy: { createdAt: 'desc' },
-  })
+    orderBy: { createdAt: "desc" },
+  });
 
   return (
-    <div className="max-w-4xl mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center my-6">My Blog</h1>
+    <div className="mx-auto max-w-4xl p-4">
+      <h1 className="my-6 text-center text-3xl font-bold">My Blog</h1>
       {posts.map((post) => (
         <BlogPost key={post.id} post={post} />
       ))}
     </div>
-  )
+  );
 }
-
-export default Page
