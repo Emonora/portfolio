@@ -12,6 +12,12 @@ const projects: Project[] = [
     url: "https://idea-gen-beryl.vercel.app/",
     techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
   },
+  {
+    title: "Blood Orange Clicker",
+    description: "A simple and fun game where you click on the orange buttons.",
+    url: "https://blood-orange-clicker.vercel.app/",
+    techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
+  },
 ];
 
 export default function ProjectsPage() {
