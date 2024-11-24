@@ -6,9 +6,16 @@ import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
 const config = {
-  images: {
-    unoptimized: true,
-  },
+    images: {
+        remotePatterns: [
+            {
+              protocol: 'https',
+              hostname: 'utfs.io',
+              port: '',
+              pathname: '/f/**',
+            },
+        ],
+    },
 };
 
 export default config;

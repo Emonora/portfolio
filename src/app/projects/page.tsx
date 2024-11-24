@@ -1,65 +1,67 @@
-interface Project {
-  title: string;
-  description: string;
-  url: string;
-  techStack: string[];
-}
-
-const projects: Project[] = [
-  {
-    title: "Coding Project Idea Generator",
-    description: "A simple yet powerful tool to generate coding project ideas.",
-    url: "https://idea-gen-beryl.vercel.app/",
-    techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
-  },
-  {
-    title: "Blood Orange Clicker",
-    description: "A simple and fun game where you click on the orange buttons.",
-    url: "https://blood-orange-clicker.vercel.app/",
-    techStack: ["Next.js", "Tailwind CSS", "TypeScript"],
-  },
-];
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "~/components/ui/carousel";
+import { Card, CardContent } from "~/components/ui/card";
+import { Button } from "~/components/ui/button";
+import Link from "next/link";
+import DarkModeToggle from "../_components/darkMode";
 
 export default function ProjectsPage() {
   return (
-    <main className="h-screen bg-slate-500 px-6 py-12">
-      <div className="mx-auto max-w-7xl">
-        <h1 className="mb-8 text-center text-4xl font-semibold text-slate-800">
-          My Projects
-        </h1>
-        <p className="mb-12 text-center text-lg text-slate-600">
-          Here are some of the projects I&apos;ve worked on.
-        </p>
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              className="transform rounded-lg bg-white p-6 shadow-lg transition hover:scale-105 hover:shadow-xl"
-            >
-              <h2 className="mb-4 text-2xl font-semibold text-slate-800">
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-blue-600"
-                >
-                  {project.title}
-                </a>
-              </h2>
-              <p className="mb-4 text-slate-600">{project.description}</p>
-              <div className="flex flex-wrap space-x-2">
-                {project.techStack.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="rounded-full bg-blue-200 px-3 py-1 text-sm text-blue-800"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+    <main className="min-w-screen flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] p-4 dark:text-white">
+      <h1 className="text-4xl font-bold">Projects</h1>
+      <p>Welcome to my projects page!</p>
+      <DarkModeToggle />
+      <div className="flex flex-row pt-10">
+        <Carousel>
+          <CarouselContent>
+            <CarouselItem>
+              <Card>
+                <CardContent className="flex aspect-square flex-col items-center justify-center gap-4 p-6">
+                  <h1 className="text-2xl font-bold text-primary">
+                    Coding Project Idea Generator
+                  </h1>
+                  <p>A tool to generate coding project ideas.</p>
+                  <Button asChild variant="link">
+                    <Link href="https://idea-gen-beryl.vercel.app/">View</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+            <CarouselItem>
+              <Card>
+                <CardContent className="flex aspect-square flex-col items-center justify-center gap-4 p-6">
+                  <h1 className="text-2xl font-bold text-primary">
+                    Blood Orange Clicker
+                  </h1>
+                  <p>A simple cookie clicker clone</p>
+                  <Button asChild variant="link">
+                    <Link href="https://blood-orange-clicker.vercel.app/">
+                      View
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+      <div className="flex flex-row">
+        <Button variant="link" asChild className="mt-4 text-white">
+          <Link href="/about">About</Link>
+        </Button>
+        <Button variant="link" asChild className="mt-4 text-white">
+          <Link href="/">Home</Link>
+        </Button>
+        <Button variant="link" asChild className="mt-4 text-white">
+          <Link href="/contact">Contact me</Link>
+        </Button>
       </div>
     </main>
   );

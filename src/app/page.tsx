@@ -1,58 +1,32 @@
-import Link from "next/link";
 import Image from "next/image";
-import { HiOutlineUser, HiOutlineCode, HiOutlineMail } from "react-icons/hi";
+import { Button } from "~/components/ui/button";
+import Link from "next/link";
+import { Toggle } from "~/components/ui/toggle";
+import DarkModeToggle from "./_components/darkMode";
 
 export default function HomePage() {
   return (
-    <main className="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-r from-purple-700 via-indigo-500 to-blue-600 p-8 text-white">
-      <div className="absolute top-10 flex w-full justify-center">
-        <Image
-          src="/pfp.jpeg"
-          alt="Emonora"
-          className="h-32 w-32 rounded-full border-4 border-white shadow-lg"
-          width={64}
-          height={64}
-        />
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
+      <Image
+        src="/pfp.jpeg"
+        alt="Profile picture"
+        width={200}
+        height={200}
+        className="rounded-full"
+      />
+      <h1 className="text-6xl font-bold">Welcome to my portfolio!</h1>
+      <DarkModeToggle />
+      <div className="flex flex-row gap-4">
+        <Button variant="link" asChild className="h-20 w-20 text-white">
+          <Link href="/about">About me</Link>
+        </Button>
+        <Button variant="link" asChild className="h-20 w-20 text-white">
+          <Link href="/projects">Projects</Link>
+        </Button>
+        <Button variant="link" asChild className="h-20 w-20 text-white">
+          <Link href="/contact">Contact me</Link>
+        </Button>
       </div>
-
-      <h1 className="text-shadow-lg animate__animated animate__fadeIn animate__delay-1s mb-10 text-center text-5xl font-extrabold md:text-6xl">
-        Welcome to My Portfolio!
-      </h1>
-
-      <div className="animate__animated animate__fadeIn animate__delay-2s flex flex-col items-center justify-center gap-6 md:flex-row md:gap-8">
-        <Link
-          href="/about"
-          className="mt-4 transform rounded-full bg-purple-700 px-10 py-4 text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105 hover:bg-purple-800 hover:bg-opacity-90 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
-        >
-          <HiOutlineUser className="mr-2 inline-block text-xl" />
-          About
-        </Link>
-
-        <Link
-          href="/projects"
-          className="mt-4 transform rounded-full bg-purple-700 px-10 py-4 text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105 hover:bg-purple-800 hover:bg-opacity-90 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
-        >
-          <HiOutlineCode className="mr-2 inline-block text-xl" />
-          Projects
-        </Link>
-
-        <Link
-          href="/contact"
-          className="mt-4 transform rounded-full bg-purple-700 px-10 py-4 text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105 hover:bg-purple-800 hover:bg-opacity-90 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
-        >
-          <HiOutlineMail className="mr-2 inline-block text-xl" />
-          Contact
-        </Link>
-        <Link 
-          href="/blog"
-          className="mt-4 transform rounded-full bg-purple-700 px-10 py-4 text-lg font-semibold text-white shadow-xl transition duration-300 hover:scale-105 hover:bg-purple-800 hover:bg-opacity-90 hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50"
-        >
-          <HiOutlineMail className="mr-2 inline-block text-xl" />
-          Blog
-        </Link>
-      </div>
-
-      <div className="absolute inset-0 z-[-1] bg-black bg-opacity-60 blur-lg"></div>
     </main>
   );
 }

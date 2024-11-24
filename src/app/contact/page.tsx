@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import { Button } from "~/components/ui/button";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -46,11 +48,11 @@ export default function ContactForm() {
   };
 
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-center bg-gray-500 px-4 py-8">
-      <h1 className="mb-6 text-3xl font-semibold text-slate-800">Contact Me</h1>
+    <main className="flex h-screen w-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] px-4 py-8">
+      <h1 className="mb-6 text-3xl font-semibold text-white">Contact Me</h1>
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg space-y-4 rounded-lg bg-white p-6 shadow-lg"
+        className="w-full max-w-lg space-y-4 rounded-lg bg-white p-6 shadow-lg dark:bg-black dark:text-white"
       >
         <div className="space-y-2">
           <label
@@ -116,6 +118,17 @@ export default function ContactForm() {
           {statusMessage}
         </p>
       )}
+      <div className="flex flex-row">
+        <Button variant="link" asChild className="mt-4 text-white">
+          <Link href="/projects">Projects</Link>
+        </Button>
+        <Button variant="link" asChild className="mt-4 text-white">
+          <Link href="/">Home</Link>
+        </Button>
+        <Button variant="link" asChild className="mt-4 text-white">
+          <Link href="/about">About</Link>
+        </Button>
+      </div>
     </main>
   );
 }
