@@ -57,7 +57,7 @@ export default function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-slate-700"
+            className="block text-sm font-medium text-slate-700 dark:text-white"
           >
             Name:
           </label>
@@ -74,7 +74,7 @@ export default function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-slate-700"
+            className="block text-sm font-medium text-slate-700 dark:text-white"
           >
             Email:
           </label>
@@ -91,7 +91,7 @@ export default function ContactForm() {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-slate-700"
+            className="block text-sm font-medium text-slate-700 dark:text-white"
           >
             Message:
           </label>
