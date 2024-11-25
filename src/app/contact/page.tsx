@@ -42,6 +42,7 @@ export default function ContactForm() {
       }
     } catch (error) {
       setStatusMessage("There was an error sending your message.");
+      console.error(error);
     }
 
     setIsSubmitting(false);
