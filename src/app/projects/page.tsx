@@ -40,9 +40,7 @@ export default function ProjectsPage() {
                   </h1>
                   <p>A simple cookie clicker clone</p>
                   <Button asChild variant="link">
-                    <Link href="https://blood-orange-clicker.vercel.app/">
-                      View
-                    </Link>
+                    <Link href="/projects/boc/">View</Link>
                   </Button>
                 </CardContent>
               </Card>
