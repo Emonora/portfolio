@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { Button } from "~/components/ui/button";
 import Link from "next/link";
-import { Toggle } from "~/components/ui/toggle";
 import DarkModeToggle from "./_components/darkMode";
 
 export default function HomePage() {
