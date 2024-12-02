@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+//TODO: update styling for the blog page
+//TODO: add navigation buttons to the bottom of the blog page
+
 export default function Blog() {
   return (
     <main className="gap-4 p-4">
