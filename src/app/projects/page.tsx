@@ -27,7 +27,7 @@ export default function ProjectsPage() {
                   </h1>
                   <p>A tool to generate coding project ideas.</p>
                   <Button asChild variant="link">
-                    <Link href="https://idea-gen-beryl.vercel.app/">View</Link>
+                    <Link href="/projects/cpig/">View</Link>
                   </Button>
                 </CardContent>
               </Card>

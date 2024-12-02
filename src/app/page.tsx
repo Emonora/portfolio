@@ -26,6 +26,9 @@ export default function HomePage() {
         <Button variant="link" asChild className="h-20 w-20 text-white">
           <Link href="/contact">Contact me</Link>
         </Button>
+        <Button variant="link" asChild className="h-20 w-20 text-white">
+          <Link href="/blog">Blog</Link>
+        </Button>
       </div>
     </main>
   );
