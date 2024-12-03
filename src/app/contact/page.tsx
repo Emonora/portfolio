@@ -53,7 +53,7 @@ export default function ContactForm() {
       <h1 className="mb-6 text-3xl font-semibold text-white">Contact Me</h1>
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-lg space-y-4 rounded-lg bg-white p-6 shadow-lg dark:bg-black dark:text-white"
+        className="w-full max-w-lg space-y-4 rounded-lg bg-white p-6 shadow-lg dark:bg-black dark:text-black"
       >
         <div className="space-y-2">
           <label
