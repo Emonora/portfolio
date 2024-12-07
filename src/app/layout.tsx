@@ -13,12 +13,6 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="fediverse:creator" content="@Emonora@tech.lgbt"></meta>
-      </head>
       <body>{children}</body>
     </html>
   );
