@@ -37,6 +37,9 @@ export default function AboutPage() {
           <Link href="/contact">Contact me</Link>
         </Button>
       </div>
+      <a rel="me" href="https://tech.lgbt/@Emonora">
+        Mastodon
+      </a>
     </main>
   );
 }
