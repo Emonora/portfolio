@@ -26,6 +26,7 @@ export default function ProjectsPage() {
                     Coding Project Idea Generator
                   </h1>
                   <p>A tool to generate coding project ideas.</p>
+                  <p>(Not being actively worked on)</p>
                   <Button asChild variant="link">
                     <Link href="/projects/cpig/">View</Link>
                   </Button>
@@ -35,12 +36,24 @@ export default function ProjectsPage() {
             <CarouselItem>
               <Card>
                 <CardContent className="flex aspect-square flex-col items-center justify-center gap-4 p-6">
-                  <h1 className="text-2xl font-bold text-primary">
-                    Blood Orange Clicker
-                  </h1>
-                  <p>A simple cookie clicker clone</p>
+                  <h1 className="text-2xl font-bold text-primary">Kel</h1>
+                  <p>A simple notes app</p>
                   <Button asChild variant="link">
-                    <Link href="/projects/boc/">View</Link>
+                    <Link href="/projects/kel/">View</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+            <CarouselItem>
+              <Card>
+                <CardContent className="flex aspect-square flex-col items-center justify-center gap-4 p-6">
+                  <h1 className="text-2xl font-bold text-primary">
+                    A simple website
+                  </h1>
+                  <p>A simple website with a few links.</p>
+                  <p>(Not being actively worked on)</p>
+                  <Button asChild variant="link">
+                    <Link href="/projects/website/">View</Link>
                   </Button>
                 </CardContent>
               </Card>
